@@ -6,11 +6,13 @@
   "scripts": {
     "start": "webpack serve --open --config ./webpack.config.js --env mode=dev",
     "build": "webpack --config ./webpack.config.js --env mode=prod",
-    "lint": "eslint . --ext .ts"
+    "lint": "eslint . --ext .ts",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/ikoroleva/news-js.git"
   },
   "keywords": [],
   "author": "Aleh Serhiyenia",
@@ -26,6 +28,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.23.3",
     "eslint-plugin-prettier": "^3.4.0",
+    "gh-pages": "^5.0.0",
     "html-webpack-plugin": "^5.2.0",
     "prettier": "2.2.1",
     "style-loader": "^2.0.0",
